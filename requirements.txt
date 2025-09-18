@@ -1,0 +1,29 @@
+# Core Framework
+streamlit
+
+# Data Handling
+pandas
+numpy
+
+# Web Scraping
+requests
+beautifulsoup4
+
+# Data Cleaning & Utility
+tqdm
+missingno
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+xgboost
+
+# OpenAI API
+openai
+
+# For Saving Models
+joblib
