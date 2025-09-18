@@ -103,7 +103,7 @@ st.markdown("""
  
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\shant\Desktop\COURSES\project\GDP Finder - My one\New folder\Final_output.csv")
+    df = pd.read_csv(r"Final_output.csv")
    
     region_map = {
         "North America": ["United States", "Canada", "Mexico"],
@@ -616,4 +616,5 @@ st.markdown(
     "Built with Streamlit & Plotly</div>",
     unsafe_allow_html=True
 )
+
  
