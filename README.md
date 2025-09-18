@@ -1,6 +1,6 @@
 # AI-Powered Economic Intelligence Dashboard
 
-An interactive data science dashboard that transforms complex global economic data into easy-to-understand visual insights — powered by web scraping, machine learning, and GPT summarization.
+An interactive data science dashboard that transforms complex global economic data into easy-to-understand visual insights - powered by web scraping, machine learning, and GPT summarization.
 
 > Built to support **governments**, **researchers**, and **data scientists** with real-time analysis of **GDP**, **trade**, **debt**, **inflation**, and **growth patterns** across 180+ countries.
 
