@@ -5,9 +5,9 @@ import plotly.graph_objects as go
 import numpy as np
 from plotly.subplots import make_subplots
 
-# -------------------------
+
 # Page Setup
-# -------------------------
+
 st.set_page_config(
     layout="wide", 
     page_title="Economic Intelligence Platform",
@@ -88,12 +88,12 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# -------------------------
+
 # Load Data
-# -------------------------
+
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\shant\Desktop\COURSES\project\GDP Finder - My one\New folder\output\economic_intelligence_dataset.csv")
+    df = pd.read_csv("economic_intelligence_dataset.csv")
     
     region_map = {
         "North America": ["United States", "Canada", "Mexico"],
@@ -116,14 +116,14 @@ def load_data():
 
 df = load_data()
 
-# -------------------------
+
 # Header
-# -------------------------
+
 st.markdown('<div class="main-header">Economic Intelligence Platform</div>', unsafe_allow_html=True)
 
-# -------------------------
+
 # Sidebar Navigation
-# -------------------------
+
 st.sidebar.title("Navigation")
 section = st.sidebar.selectbox("Select Dashboard:", [
     "Country Analysis",
@@ -213,9 +213,9 @@ if section == "Country Analysis":
             </div>
             """, unsafe_allow_html=True)
 
-# -------------------------
+
 # Country Analysis Dashboard
-# -------------------------
+
 elif section == "Global Overview":
     
     # Key Metrics Row
@@ -321,9 +321,9 @@ elif section == "Global Overview":
         )
         st.plotly_chart(fig_bar, use_container_width=True)
 
-# -------------------------
+
 # Regional Insights Dashboard
-# -------------------------
+
 elif section == "Regional Insights":
     
     # Regional summary metrics
@@ -441,9 +441,9 @@ elif section == "Regional Insights":
         fig_box.update_xaxes(tickangle=45)
         st.plotly_chart(fig_box, use_container_width=True)
 
-# -------------------------
+
 # Trade Analysis Dashboard
-# -------------------------
+
 elif section == "Trade Analysis":
     
     # Trade metrics
@@ -587,12 +587,13 @@ elif section == "Download Data":
             height=400
         )
 
-# -------------------------
+
 # Footer
-# -------------------------
+
 st.markdown(
     "<div style='text-align: center; color: #888; font-size: 0.8rem; margin-top: 1rem;'>"
     "Economic Intelligence Platform | Data Source: Economic Intelligence Dataset | "
     "Built with Streamlit & Plotly</div>",
     unsafe_allow_html=True
+
 )
